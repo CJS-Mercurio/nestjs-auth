@@ -1,6 +1,7 @@
-import { IsEmail, IsNotEmpty, MinLength } from "class-validator";
+import { IsEmail, IsNotEmpty, IsString, MinLength } from "class-validator";
 
 export class CreateUserDTO {
+  @IsString()
   name: string;
 
   @IsNotEmpty()
@@ -10,4 +11,12 @@ export class CreateUserDTO {
   @IsNotEmpty()
   @MinLength(8)
   password: string;
+}
+
+export class UploadUserImageDTO {
+  @IsString()
+  imageUrl: string;
+  
+  @IsString()
+  cloudinaryPublicId: string
 }
