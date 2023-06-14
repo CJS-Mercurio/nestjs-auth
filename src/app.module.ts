@@ -6,6 +6,7 @@ import { AppService } from './app.service';
 import { MongooseModule } from '@nestjs/mongoose';
 import * as dotenv from 'dotenv';
 import { MailerModule } from '@nestjs-modules/mailer';
+import { CloudinaryModule } from './common/cloudinary/cloudinary.module';
 
 dotenv.config({ path: `.env${'.' + process.env?.NODE_ENV}` });
 
@@ -27,7 +28,8 @@ dotenv.config({ path: `.env${'.' + process.env?.NODE_ENV}` });
         },
       }),
       AuthModule,
-      UserModule
+      UserModule,
+      CloudinaryModule
   ],
   controllers: [AppController],
   providers: [AppService],
