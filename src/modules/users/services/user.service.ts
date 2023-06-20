@@ -11,7 +11,6 @@ import { CreateUserDTO, UploadUserImageDTO } from '../dto/create-user.dto';
 import { HashService } from 'src/common/utils/hash.service';
 import { ChangePasswordDTO } from '../dto/change-password.dto';
 import { updateUserDTO } from '../dto/update-user.dto';
-import { CloudinaryService } from 'src/common/cloudinary/cloudinary.service';
 
 @Injectable()
 export class UserService {
